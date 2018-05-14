@@ -1,0 +1,362 @@
+@charset "UTF-8";
+.middle{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+img{
+  display: block;
+}
+.page1{
+  background: url("../images/bg-01-990-600.png") no-repeat center bottom  #F9DD67;
+}
+.page2{
+  background: url("../images/bg-02-2000-600.png") no-repeat center bottom  #84A2D4;
+}
+.page3{
+  background: url("../images/bg-03.png") no-repeat center bottom #EF674D;
+}
+.page4{
+  background: url("../images/bg-04-2000-600.png") no-repeat center bottom #FFEEDD;
+}
+.page5{
+  background:url("../images/bg-05-2000-1500.png") ;
+}
+.page6{
+  background:url("../images/bg-06-2500-600.png") no-repeat 20% bottom #85D9ED;
+}
+.page7{
+  background:url("../images/bg-07-2000-1500.png") no-repeat center bottom;
+}
+.page8{
+  background: url("../images/bg-08.png") center bottom;
+}
+/*-----------固定定位-------------*/
+.goshopping,
+.next {
+  position: fixed;
+  z-index: 999;
+  right: 10%;
+}
+
+.goshopping {
+  top: 10%;
+}
+
+.next {
+  bottom: 10%;
+  animation: next .5s infinite;
+}
+
+@keyframes next {
+  50% {
+    bottom: 12%;
+  }
+}
+
+
+/*-----------第一屏的样式-----------*/
+.one-flytitle{
+  bottom: 500px;
+  margin-left: 50px;
+  animation:one-flytitle 3s infinite;
+}
+@keyframes one-flytitle {
+  50%{
+    bottom: 480px;
+  }
+}
+
+.one-sofa{
+  margin-left: -270px;
+  bottom: 320px;
+  animation: one-sofa 4s infinite;
+  /*动画位置350px*/
+}
+@keyframes one-sofa{
+  50% {
+    bottom: 350px;
+  }
+
+}
+.one-tips{
+  bottom: 150px;
+}
+
+/*-----------第二屏的样式-----------*/
+.two-words {
+  bottom: 550px;
+  display: none;
+}
+
+.two-goods {
+  bottom: 210px;
+  display: none;
+}
+
+
+.two-search-words {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  display: none;
+}
+
+.two-search-wrapper {
+  bottom: 330px;
+  margin-left: 600px;
+}
+
+.two-search-copy {
+  bottom: 330px;
+  display: none;
+}
+
+/*遮罩层和假沙发*/
+.two-mask,
+.two-only-sofa{
+  width: 105px;
+  height: 105px;
+  bottom: 323px;
+  margin-left: -55px;
+  display: none;
+  z-index: 333;
+}
+.two-mask {
+  background-color: #fff;
+}
+/*-----------第三屏样式-----------*/
+
+.three-btn,
+.three-btn-a{
+  bottom: 70px;
+  margin-left: 150px;
+}
+.three-btn-a {
+  display: none;
+}
+.three-sel,
+.three-sel-a{
+  bottom: 160px;
+  margin-left: 200px;
+}
+.three-sel-a{
+  display: none;
+}
+/*第三屏的假沙发*/
+.three-sofa-rotate {
+  margin-left: -125px;
+  bottom: 200px;
+  display: none;
+  z-index: 333;
+}
+/*-----------第4屏样式-----------*/
+.four-car{
+  margin-left: -250px;
+  bottom: 50px;
+  z-index: 666;
+}
+
+.four-words,
+.four-words-a{
+  bottom: 470px;
+
+}
+.four-words-a{
+  display: none;
+}
+.four-car-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.four-sofa-rotate {
+  margin-left: -200px;
+  bottom: 220px;
+  display: none;
+}
+.four-address-card {
+  bottom: 170px;
+  display: none;
+}
+
+.four-address-txt {
+  bottom: 340px;
+  display: none;
+}
+.four-cloud {
+  bottom: 500px;
+  animation: four-cloud 10s infinite;
+}
+@keyframes four-cloud{
+  50%{
+    margin-left: -400px;
+  }
+}
+
+/*-----------第5屏样式-----------*/
+.five-mouse,
+.five-mouse-a{
+  bottom: 220px;
+  margin-left: 300px;
+}
+
+.five-mouse-a {
+  display: none;
+}
+
+.five-hand {
+  margin-left: 250px;
+
+  /*一开始手的bottom:*/
+  bottom: -375px;
+
+
+  /*手戳上来的位置*/
+  /*bottom: 0;*/
+}
+
+.five-card {
+  bottom: 200px;
+  margin-left: -220px;
+  z-index: 888;
+
+}
+
+.five-words {
+  bottom: 530px;
+  margin-left: -100px;
+  display: none;
+}
+
+.five-order {
+  margin-left: -250px;
+
+  /*账单的初始位置*/
+  bottom: 240px;
+  /*z-index: 225;*/
+  display: none;
+
+  /*账单的动画位置*/
+  /*bottom: 370px;*/
+}
+
+
+.five-sofa-rotate {
+  margin-left: -200px;
+
+  /*沙发的初始位置*/
+  bottom: 100%;
+
+  display: none;
+  z-index: 333;
+  /*沙发的第二位置*/
+  /*bottom: 100px;*/
+}
+/*-----------第6屏样式-----------*/
+.six-box{
+  bottom: 450px;
+  /*箱子的第一位置*/
+  margin-left: -500px;
+
+
+  /*箱子的第二个位置*/
+  /*margin-left: -220px;*/
+
+  z-index: 666;
+
+  /*箱子的第三位置*/
+  /*bottom: 30px;*/
+}
+
+.six-car {
+  margin-left: -190px;
+  z-index: 999;
+}
+.six-address {
+  bottom: 120px;
+  margin-left: -60px;
+  display: none;
+}
+
+.six-getProduct {
+  position: absolute;
+  bottom: 400px;
+  right: 450px;
+  display: none;
+}
+
+.six-words{
+  position: absolute;
+  right: 720px;
+  bottom: 410px;
+  display: none;
+}
+.six-door{
+  position: absolute;
+  bottom: 116px;
+  right: 284px;
+  display: none;
+}
+
+.six-women{
+  position: absolute;
+  bottom: 116px;
+  right: 400px;
+  display: none;
+}
+
+.six-man {
+
+  /*快递小哥使用right实现的中心定位*/
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 0;
+
+  /*快递小哥的第一个位置*/
+  margin-right: 180px;
+
+
+  /*快递小哥的第二个位置*/
+  /*bottom: 111px;*/
+  display: none;
+
+
+  /*快递小哥的第三位置*/
+  /*right: 450px;*/
+
+}
+
+/*--------------第七屏-------------------*/
+.seven-good{
+  bottom: 380px;
+  margin-left: -250px;
+  display: none;
+}
+
+.seven-star-wrapper {
+  bottom: 442px;
+  margin-left: -246px;
+  width: 100px;
+  height: 16px;
+  overflow: hidden;
+}
+
+.seven-star{
+  position: absolute;
+  left: -100%;
+  transition: all 1s steps(5);
+}
+
+/*--------------第8屏------------------*/
+.eight-btn{
+  bottom: 350px;
+}
+.eight-hand {
+  position: absolute;
+  bottom: -450px;
+}
