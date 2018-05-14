@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/13-sitenav.css">
+  <title>sitenav</title>
+</head>
+<body>
+<div class="mm_container">
+  <div class="count_header">
+
+    <div class="log1 fl"></div>
+    <div class="log2 fl"><h3>商场导航</h3></div>
+    <div class="log3 fl"><a href="#"><img src="images/header_app.png" alt=""></a></div>
+  </div>
+
+  <div class="sitedi">
+    <a href="#"><img src="images/360.png" alt="">京东商城</a>
+
+  </div>
+
+</div>
+<script src="jquery/jquery.min.js"></script>
+<script src="jquery/13-sitenav.js"></script>
+<script src="template/template-web.js"></script>
+<script type="text/template" id="sitenav">
+  {{each result v}}
+  <!--渲染-->
+  <a href="#"><img src="{{v.navImg}}" alt="">{{v.navTitle}}</a>
+  {{/each}}
+</script>
+</body>
+</html>

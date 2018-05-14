@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/11-couproduct.css">
+  <title>conproduct</title>
+</head>
+<body>
+<div class="mm_container">
+  <div class="count_header">
+
+    <div class="log1 fl"></div>
+    <div class="log2 fl"><h3>肯德基优惠券</h3></div>
+    <div class="log3 fl"><a href="#"><img src="images/header_app.png" alt=""></a></div>
+  </div>
+
+  <div class="main_product">
+    <div class="text">
+
+      --点餐前出示手机中的优惠券，即可享受优惠--
+
+    </div>
+    <div class="mm_productList">
+      <ul class="list">
+        <li>
+          <a href="#">
+            <div class="product"><img src="images/Thumb_2016060015515937123.png" alt=""></div>
+            <div class="info">
+              <div>
+                <p>
+                  C27  两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券
+                </p></div>
+              <div class="price">
+                <b>￥1999</b>
+              </div>
+              <div class="comment">
+                <span>有效期</span>
+
+              </div>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </div>
+
+    <div class="footer_bottom">
+      <p><a href="javascript:;">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+
+  <!--模态框-->
+  <!--在本页面写一个模态框，position:fixed top:0 left:0 层级高一点，backgorund-color:rgba(0,0,0,.5),在写其他样式-->
+
+
+  <div class="modal">
+<!--模态框样式更改-->
+<div class="motai">SPAN</div>
+  </div>
+
+
+  </div>
+
+<script src="jquery/jquery.min.js"></script>
+<script src="jquery/11-couproduct.js"></script>
+<script src="template/template-web.js"></script>
+
+
+<script type="text/template" id="conproduct">
+  {{each result v}}
+  <li data-id="{{v.productId}}">
+
+    <a href="#">
+      <div class="product">{{@v.couponProductImg}}</div>
+      <div class="info">
+        <div><p class="txt-cut">{{v.couponProductName}}</p></div>
+        <div class="price">
+          <b>{{v.couponProductPrice}}</b>
+        </div>
+        <div class="comment">
+          <span>{{v.couponProductTime}}</span>
+
+        </div>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+</body>
+</html>

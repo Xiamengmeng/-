@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/count.css">
+  <title>count</title>
+</head>
+<body>
+
+
+<div class="mm_container">
+
+
+
+  <div class="count_header">
+
+    <div class="log1 fl"></div>
+    <div class="log2 fl"><h3>省钱控-最新优惠</h3></div>
+    <div class="log3 fl"><a href="#"><img src="images/header_app.png" alt=""></a></div>
+
+  </div>
+
+
+  <div class="mm_productList">
+    <ul class="list">
+      <li>
+        <a href="#">
+          <div class="product"><img src="images/Thumb_2016060015515937123.png" alt=""></div>
+          <div class="info">
+            <div class="text txt-cut"> 移动端凑单品：海天 鲜味 生抽 1.28L <span>10.8</span>移动端凑单品：海天 鲜味 生抽 1.28L <span>10.8</span>移动端凑单品：海天 鲜味 生抽 1.28L <span>10.8</span></div>
+            <div class="other">
+              <span>京东商城 | 10-25 14:10</span>
+              <i class="icon-comment"></i>
+              <span class="ss">有3人评论</span>
+            </div>
+
+
+          </div>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="page">
+    <span class="prev">上一页</span>
+    <span>
+      <select class="selected">
+      </select>
+    </span>
+
+    <span class="next">下一页</span>
+
+
+  </div>
+
+
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </div>
+
+    <div class="footer_bottom">
+      <p><a href="javascript:;">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+  <script src="jquery/jquery.min.js"></script>
+  <script src="template/template-web.js"></script>
+  <script src="jquery/count.js"></script>
+
+
+
+  <script type="text/template" id="tmped">
+    {{each result i}}
+    <li>
+
+      <!--点击跳转到-->
+      <a href="gncount.html?id={{i.productId}}">
+        <div class="product">{{@i.productImgLg}}</div>
+        <div class="info">
+          <div class="text txt-cut"> {{i.productName}}<span>{{i.productPinkage}}</span></div>
+          <div class="other">
+            <span>{{i.productFrom}} | {{i.productTime}}</span>
+            <i class="icon-comment"></i>
+            <span class="ss">{{i.productComCount}}</span>
+          </div>
+
+
+        </div>
+      </a>
+    </li>
+    {{/each}}
+</script>
+
+
+</body>
+</html>

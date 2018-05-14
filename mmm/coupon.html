@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/10-getcoupon.css">
+  <title>getcoupon</title>
+</head>
+<body>
+<div class="mm_container">
+  <div class="count_header">
+
+    <div class="log1 fl"></div>
+    <div class="log2 fl"><h3>优惠券</h3></div>
+    <div class="log3 fl"><a href="#"><img src="images/header_app.png" alt=""></a></div>
+  </div>
+  
+  <div class="coupon">
+    <ul class="getpon">
+      <li><a href="#"><img src="images/2013310191729944.jpg" alt=""><p>肯德基</p></a></li>
+    </ul>
+  </div>
+
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </div>
+
+    <div class="footer_bottom">
+      <p><a href="javascript:;">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+
+<script src="jquery/jquery.min.js"></script>
+<script src="template/template-web.js"></script>
+<script src="jquery/10-getcoupon.js"></script>
+<script type="text/template" id="coupon">
+  {{each result i}}
+
+  <!--a标签跳转路径 {{i.couponLink}}-->
+
+  <li><a href="11-couproduct.html?id={{i.couponId}}"><img src="{{i.couponImg}}" alt=""><p>{{i.couponTitle}}</p></a></li>
+  {{/each}}
+</script>
+</body>
+</html>

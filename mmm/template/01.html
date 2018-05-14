@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Title</title>
+</head>
+<body>
+<div id="dd"></div>
+<!--//分页模块-->
+<div class="paging">
+  <button>上一页</button>
+  <select  id="selecd">
+  </select>
+  <button>下一页</button>
+</div>
+<script src="../common/jquery/jquery-1.12.0.js"></script>
+<script>
+  window.addEventListener("load",function () {
+//      获取页面id
+    var url =window.location.search.slice(1);
+//      设置当前页数变量
+    var pages;
+//      设置ajax函数
+    function connectUrl(url,pageid){
+      $.get("http://127.0.0.1:9090/api/getproductlist?categoryid="+url+"&pageid="+pageid).then(function (data) {
+//         设置option的总数
+        pages = Math.ceil(data.totalCount/data.pagesize) ;
+//          设置页面数据接收变量
+        var html = "";
+        var option="";
+//          渲染页面
+        for(v of data.result){
+          html+=`<div>
+                    ${v.productImg}
+                    <div>
+                     <p>
+                       <a href="details.html?${v.productId}">
+                        ${v.productName}
+                      </a>
+                     </p>
+                      <p>${v.productPrice}</p>
+                      <p>
+                        <span>${v.productQuote}</span>
+                        <span>${v.productCom}</span>
+                      </p>
+                    </div>
+                  </div>`
+        }
+        $("#dd").html(html);
+        for(i=0;i<pages;i++){
+          option+=`<option value=${i+1}>${i+1}/${pages}</option>`
+        }
+        $("#selecd").html(option);
+//          初始化当前选中项
+        $("option:nth-child("+pageid+")").prop("selected",true);
+      })
+    }
+//      初始化调用函数
+    connectUrl(url,1);
+//      初始化点击事件变量
+    var val = 1;
+//      绑定点击事件
+    $(".paging").on("click","button",function () {
+//        判断是上一页还是下一页
+      if($(this).text()=="上一页"){
+        if(val > 1){
+          val--;
+//            设置当前selected值为false，下一个设置为true
+          $(":selected").prop("selected",false).prev().prop("selected",true);
+        }
+      } else {
+//          当是下一页的时候与上一页相反
+        if(val < (pages)){
+          val++;
+          $(":selected").prop("selected",false).next().prop("selected",true);
+        }
+      }
+      connectUrl(url,val)
+    })
+//      设置change事件
+    $("#selecd").on("change",function(){
+      var val = $(":selected").val();
+      connectUrl(url,val);
+    })
+  })
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>category</title>
+  <link rel="stylesheet" href="css/category.css">
+  <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+  <div class="mm_header">
+    <div class="logo">
+      <a href="#"><img src="images/header_logo.png" alt=""></a>
+    </div>
+
+    <div class="appdown">
+      <a href="#"><img src="images/header_app.png" alt=""></a>
+    </div>
+  </div>
+  <div class="mm_search">
+    <input type="text" class="input" placeholder="请输入你想比价的商品"><button class="btn">搜索</button>
+  </div>
+  <div class="mm_banner">
+    <ul class="category">
+
+      <li><a href="#">大家电</a>
+        <ul class="divlis ">
+          <li><a href="#">电视</a></li>
+          <li><a href="#">冰箱</a></li>
+          <li><a href="#">冰箱</a></li>
+          <li><a href="#">冰箱</a></li>
+
+        </ul>
+      </li>
+      <li><a href="#">大家电</a></li>
+      <li><a href="#">大家电</a></li>
+      <li><a href="#">大家电</a></li>
+    </ul>
+  </div>
+
+
+
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </div>
+
+    <div class="footer_bottom">
+      <p><a href="javascript:;">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+
+  <script src="jquery/jquery.min.js"></script>
+  <script src="template/template-web.js"></script>
+  <script src="jquery/category.js"></script>
+
+
+
+  <script type="text/template" id="temp">
+    {{each result v}}
+    <li data-id="{{v.titleId}}">
+      <a href="#">
+        {{v.title}}
+
+      </a>
+      <ul class="divlis hidden">
+      </ul>
+    </li>
+    {{/each}}
+  </script>
+
+
+  <script type="text/template" id="emp">
+    {{each result v}}
+
+    <li data-Id="id"><a href="productList.html?id={{v.categoryId}}">
+      {{v.category}}</a></li>
+
+    {{/each}}
+  </script>
+</body>
+</html>

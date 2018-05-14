@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/14-brandtitle.css">
+  <title>brandtitle</title>
+</head>
+<body>
+
+<div class="mm_container">
+
+  <div class="mm_header">
+    <div class="logo">
+      <a href="#"><img src="images/header_logo.png" alt=""></a>
+    </div>
+
+    <div class="appdown">
+      <a href="#"><img src="images/header_app.png" alt=""></a>
+    </div>
+  </div>
+  <div class="mm_search">
+    <input type="text" class="input" placeholder="请输入你想比价的商品"><button class="btn">搜索</button>
+  </div>
+  <div class="productNav">
+    <ul class="pro">
+      <li class="main"><a href="#">首页></a></li>
+      <li class="all"><a href="#">全部分类></a></li>
+    </ul>
+  </div>
+
+
+  <section id="category">
+    <div class="hot">热门品牌</div>
+    <div class="row">
+      <ul class="divlis">
+        <li><a href="#">平板电视十大品牌</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </div>
+
+    <div class="footer_bottom">
+      <p><a href="javascript:;">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+<script src="jquery/jquery.min.js"></script>
+<script src="template/template-web.js"></script>
+<script src="jquery/14-brandtitle.js"></script>
+
+
+
+<script type="text/template" id="title">
+  {{each result i}}
+  <li><a href="15-brand.html?id={{i.brandTitleId}}">{{i.brandTitle}}</a></li>
+  {{/each}}
+</script>
+</body>
+</html>

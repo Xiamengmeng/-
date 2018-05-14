@@ -1,0 +1,114 @@
+@import "base";
+@import "header";
+@import "adapter";
+@import "vaiable";
+
+
+.mm_container{
+  .productNav{
+    width: 100%;
+    height: 50rem/@base;
+    background-image:linear-gradient(#fff,#ccc);
+    border-bottom: 1px solid #ccd;
+    border-top: 1px solid #ebebeb;
+    overflow: hidden;
+    li{
+      height: 50rem/@base;
+      float: left;
+      line-height: 50rem/@base;
+    }
+
+  }
+
+
+  .mm_productList{
+
+    width: 100%;
+    //background-color: #ada;
+
+    .list{
+      width: 100%;
+      li{
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        a{
+          overflow: hidden;
+          .product{
+            width: 200rem/@base;
+            height: 200rem/@base;
+            //background-color: yellowgreen;
+            float: left;
+            margin-left: 10rem/@base;
+            img{
+              width: 200rem/@base;
+              height: 200rem/@base;
+            }
+
+          }
+
+          .info{
+            height: 200rem/@base;
+            margin-left: 220rem/@base;
+
+            .text{
+              width: 100%;
+              height: 90rem/@base;
+              padding:20rem/@base;
+              font-size: 18rem/@base;
+            }
+            .price{
+              width: 100%;
+              height: 30rem/@base;
+              padding-left:20rem/@base;
+              margin-top: 5rem/@base;
+              color: #ea3900;
+            }
+            .comment{
+              width: 100%;
+              height: 40rem/@base;
+              padding:20rem/@base;
+              span{
+                color:#a1a1a1;
+                font-size: 14rem/@base;
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .page{
+    width: 100%;
+    height: 80rem/@base;
+    line-height: 80rem/@base;
+    background-color: #fff;
+    font-size: 12rem/@base;
+    span{
+      display: block;
+      width: 120rem/@base;
+      height: 60rem/@base;
+      line-height: 60rem/@base;
+      float: left;
+      background-color: #ccc;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 10rem/@base 50rem/@base;
+      text-align: center;
+      select{
+        width: 100%;
+        height: 100%;
+        border: none;
+
+      }
+    }
+  }
+
+
+
+}
+
+

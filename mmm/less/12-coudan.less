@@ -1,0 +1,151 @@
+@import "adapter";
+@import "base";
+@import "header";
+@import "vaiable";
+.count_header{
+  background-color:#f4483e !important ;
+
+}
+.coudan_nav{
+  font-size: 22rem/@base;
+  .search{
+    width: 40rem/@base;
+    height: 60rem/@base;
+    //background-color: #add;
+    float: right;
+
+    .icon-search{
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-image:url("../images/icon_bar.png");
+      background-repeat: no-repeat;
+      color: #ffffff;
+      //background-size: 22px 22px;
+      background-position: center center;
+    }
+  }
+  .city{
+    width: 100%;
+    height: 60rem/@base;
+    //background-color: pink;
+    margin-right: 60rem/@base;
+    position: relative;
+
+    .city_nav{
+      overflow: hidden;
+      li{
+        width: 33.33%;
+        height: 60rem/@base;
+        //background-color: #add;
+        float: left;
+        text-align: center;
+        line-height: 60rem/@base;
+      }
+    }
+
+
+
+
+
+  }
+
+  #city{
+    width: 750rem/@base;
+    //height: 300rem/@base;
+    background-color: #fff;
+    z-index: 999;
+    position: absolute;
+    display: none;
+    .city-modalul{
+      li{
+        color: #333;
+        //width: 100%;
+        height: 50rem/@base;
+        border-bottom: 1px solid #ccc;
+        line-height: 50rem/@base;
+        padding-left:10rem/@base;
+      }
+    }
+  }
+  #area{
+    width: 750rem/@base;
+    //height: 300rem/@base;
+    background-color: #fff;
+    z-index: 999;
+    position: absolute;
+    display: none;
+    .area-modalul{
+      li{
+        color: #333;
+        width: 100%;
+        height: 50rem/@base;
+        border-bottom: 1px solid #ccc;
+        line-height: 50rem/@base;
+        padding-left:10rem/@base;
+      }
+    }
+  }
+
+
+
+
+  .main{
+    .mainul{
+      width: 100%;
+      height: 100%;
+      background-color: #efefef;
+      overflow: hidden;
+      //text-align: center;
+
+
+      li{
+        width: 48%;
+        //height: 320rem/@base;
+        background-color: #fff;
+        margin: 10rem/@base 0 0 10rem/@base;
+        float: left;
+
+        .img{
+          width: 100%;
+          height: auto;
+          text-align: center;
+          overflow: hidden;
+          img{
+            width: 250rem/@base;
+            height: 250rem/@base;
+            margin: 0 auto;
+          }
+        }
+        .pictext{
+          width: 100%;
+          height: 30rem/@base;
+          overflow: hidden;
+          color: #333;
+          font-size: 16rem/@base;
+        }
+
+        .buy{
+          width: 100%;
+          height: 50rem/@base;
+          
+          span:first-child{
+            color: #f8601d;
+            font-size: 20px;
+          }
+          span:last-child{
+            float: right;
+            font-size: 14px;
+            color: #FFFFFF;
+            border-radius: 3px;
+            background-color: #ff9501;
+            padding: 4px 10px;
+            text-decoration: none;
+          }
+        }
+      }
+
+    }
+  }
+
+}

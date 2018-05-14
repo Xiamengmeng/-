@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/gncount.css">
+  <title>gndetail</title>
+</head>
+<body>
+<div class="mm_container">
+  <div class="count_header">
+
+    <div class="log1 fl"></div>
+    <div class="log2 fl"><h3>国内折扣</h3></div>
+    <div class="log3 fl"><a href="#"><img src="images/header_app.png" alt=""></a></div>
+  </div>
+  <!--要渲染的部分-->
+
+
+
+  <div class="cu-content">
+    <h3 class="title">RIWA 雷瓦 T5 2档家用大功率电吹风2200W</h3>
+    <div class="info">
+      <span class="small">天猫商城</span>
+      <span class="addtime">10-25 12:52</span>
+      <span class="author">开心小编泽炎 / 慢慢买</span>
+    </div>
+    <div class="content clearfix">
+      <div class="tupic"><img src="images/201610001412282758.jpg" alt="">
+        RIWA 雷瓦 T5 2档家用大功率电吹风2200WRIWA 雷瓦 T5 2档家用大功率电吹风2200WRIWA 雷瓦 T5 2档家用大功率电吹风2200WRIWA 雷瓦 T5 2档家用大功率电吹风2200
+      </div>
+    </div>
+    <div class="pic">
+      <img src="images/201610001412282758.jpg" alt="">
+    </div>
+
+  </div>
+
+
+
+
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </div>
+
+    <div class="footer_bottom">
+      <p><a href="javascript:;">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+
+
+</div>
+<script src="jquery/jquery.min.js"></script>
+<script src="template/template-web.js"></script>
+<script src="jquery/gncount.js"></script>
+
+
+
+<script type="text/template" id="gnzk">
+  {{each result i}}
+  <h3 class="title">{{i.productName}}</h3>
+  <div class="info">
+    <span class="small">{{i.productFrom}}</span>
+    <span class="addtime">{{i.productTime}}</span>
+    <span class="author">{{i.productTips}}</span>
+  </div>
+  <div class="content clearfix">
+    <div class="tupic">{{@i.productImgSm}}
+      {{i.productInfo2}}
+    </div>
+  </div>
+  <div class="pic">
+    {{@i.productImgSm}}
+
+  </div>
+  <div class="area">
+    <div class="drop" style="display: block;">
+      {{@i.productCity}}
+    </div>
+
+  </div>
+
+  <div class="gobuy">前去购买</div>
+  <div class="img"><img src="images/mmbweixin2.png" alt=""></div>
+  {{@i.productComment}}
+
+
+
+
+  {{/each}}
+</script>
+</body>
+</html>

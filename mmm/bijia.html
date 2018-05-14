@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/bijia.css">
+  <title>bijia</title>
+</head>
+<body>
+<!--<div class="mm_container">-->
+  <div class="mm_header">
+    <div class="logo">
+      <a href="#"><img src="images/header_logo.png" alt=""></a>
+    </div>
+
+    <div class="appdown">
+      <a href="#"><img src="images/header_app.png" alt=""></a>
+    </div>
+  </div>
+  <div class="mm_search">
+    <input type="text" class="input" placeholder="请输入你想比价的商品"><button class="btn">搜索</button>
+  </div>
+  <div class="productNav">
+    <ul class="pro">
+
+      <li class="main"><a href="index.html">首页></a></li>
+      <li class="all"><a href="category.html">全部分类></a></li>
+    </ul>
+  </div>
+
+<!--图片部分-->
+  <div class="bijia_product">
+    <div class="product_name">乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</div>
+    <div class="product_img">
+      <img src="images/Thumb_2016060015515937123.png" alt="">
+      <div class="product_collect"><a href="#"><img src="images/sc.jpg" alt=""></a></div>
+    </div>
+    <div class="bijia_nav">
+      <table width="100%">
+        <tbody>
+        <tr>
+          <td rowspan="1" class="p_pic"></td>
+          <td rowspan="3" class="c"></td>
+          <td rowspan="3" class="red"></td>
+          <td rowspan="2" class="pss"></td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+
+
+<div class="bijia_p">
+  <p>* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟</p>
+</div>
+<div class="bijia_xian"></div>
+<div class="bijia_comment">网友评价</div>
+
+
+
+<div class="bijia_com_list">
+  <ul class="com_list">
+    <li>
+      <div class="list1 clearfix">
+        <span class="fl">b***r</span>
+        <span class="fr">2016/10/01</span>
+      </div>
+      <div class="list1 clearfix"><span class="fr">购买自：京东商城</span></div>
+      <div class="com_text">
+        使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+  <div class="mm_morebar"><a href="#">更多优惠信息>></a></div>
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </div>
+
+    <div class="footer_bottom">
+      <p><a href="javascript:;">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+<!--</div>-->
+
+<script src="jquery/jquery.min.js"></script>
+<script src="template/template-web.js"></script>
+<script src="jquery/bijia.js"></script>
+
+
+<!--图片部分模板-->
+<script type="text/template" id="temper">
+  {{each result i}}
+  <div class="product_name">{{i.productName}}</div>
+  <div class="product_img">
+    {{@i.productImg}}
+    <div class="product_collect"><a href="#"><img src="images/sc.jpg" alt=""></a></div>
+  </div>
+  <div class="bijia_nav">
+    {{@i.bjShop}}
+  </div>
+  {{/each}}
+</script>
+
+
+<!--评论部分模板-->
+<script type="text/template" id="comment">
+  {{each result i}}
+  <li>
+    <div class="list1 clearfix">
+      <span class="fl">{{i.comName}}</span>
+      <span class="fr">{{i.comTime}}</span>
+    </div>
+    <div class="list1 clearfix"><span class="fr">{{i.comFrom}}</span></div>
+    <div class="com_text">
+     {{i.comContent}}
+    </div>
+  </li>
+  {{/each}}
+</script>
+</body>
+</html>

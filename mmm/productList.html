@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/productList.css">
+  <title>productList</title>
+</head>
+<body>
+<div class="mm_container">
+  <div class="mm_header">
+    <div class="logo">
+      <a href="#"><img src="images/header_logo.png" alt=""></a>
+    </div>
+
+    <div class="appdown">
+      <a href="#"><img src="images/header_app.png" alt=""></a>
+    </div>
+  </div>
+  <div class="mm_search">
+    <input type="text" class="input" placeholder="请输入你想比价的商品"><button class="btn">搜索</button>
+  </div>
+
+  <div class="productNav">
+    <ul class="pro">
+      <li class="main"><a href="index.html">首页></a></li>
+      <li class="all"><a href="category.html">全部分类></a></li>
+    </ul>
+  </div>
+
+
+  <div class="mm_productList">
+      <ul class="list">
+        <li>
+          <a href="#">
+            <div class="product"><img src="images/Thumb_2016060015515937123.png" alt=""></div>
+            <div class="info">
+              <div class="text txt-cut">乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电</div>
+              <div class="price">
+                <b>￥1999</b>
+              </div>
+              <div class="comment">
+                <span>报价(6)</span>
+                <span>评论(2284)</span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+
+  </div>
+  <div class="page">
+    <span class="prev">上一页</span>
+    <span>
+      <select class="selected">
+      </select>
+    </span>
+
+    <span class="next">下一页</span>
+
+
+  </div>
+
+
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </div>
+
+    <div class="footer_bottom">
+      <p><a href="javascript:;">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+
+
+<script src="jquery/jquery.min.js"></script>
+<script src="jquery/productList.js"></script>
+<script src="template/template-web.js"></script>
+
+
+<script type="text/template" id="tmp-id">
+  {{each result v}}
+  <li data-id="{{v.productId}}">
+
+    <a href="bijia.html?id={{v.productId}}&&name={{v.brandName}}">
+      <div class="product">{{@v.productImg}}</div>
+      <div class="info">
+        <div class="text txt-cut">{{v.productName}}</div>
+        <div class="price">
+          <b>{{v.productPrice}}</b>
+        </div>
+        <div class="comment">
+          <span>{{v.productQuote}}</span>
+          <span>{{v.productCom}}</span>
+        </div>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>国内折扣</title>
+  <link rel="stylesheet" href="css/inlanddiscount.css">
+</head>
+<body>
+<div class="mm_container">
+  <div class="count_header">
+
+    <div class="log1 fl"></div>
+    <div class="log2 fl"><h3>商场导航</h3></div>
+    <div class="log3 fl"><a href="#"><img src="images/header_app.png" alt=""></a></div>
+  </div>
+<div class="container">
+  <div class="dis_item">
+    <ul class="clearfix">
+
+
+    </ul>
+
+  </div>
+</div>
+
+
+
+
+<!--底部footer-->
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </div>
+
+    <div class="footer_bottom">
+      <p><a href="javascript:;">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+<script src="jquery/jquery.min.js"></script>
+<script src="jquery/inlanddiscount.js"></script>
+<script src="template/template-web.js"></script>
+<!--<script src="js/inlanddiscount.js"></script>-->
+
+<script type="text/template" id="insland">
+  {{each result v i}}
+  <li>
+    <a href="gncount.html?id={{v.productId}}">
+      {{@v.productImg}}
+      <h3 class="one-txt-cut">{{v.productName}}</h3>
+      <p class="one-txt-cut">{{v.productPrice}}</p>
+      <span>{{v.productFrom}}</span>
+      <span>{{v.productTime}}</span>
+    </a>
+  </li>
+  {{/each}}
+</script>
+
+</body>
+</html>

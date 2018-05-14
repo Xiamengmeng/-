@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/baicaijia.css">
+  <title>Title</title>
+</head>
+<body>
+<div class="mm_container">
+  <div class="count_header">
+
+    <div class="log1 fl"></div>
+    <div class="log2 fl"><h3>白菜价-淘宝内部券</h3></div>
+    <div class="log3 fl"><a href="#"><img src="images/header_app.png" alt=""></a></div>
+  </div>
+
+  <div class="bcj_nav">
+    <div class="bjc_big">
+    <ul class="navli">
+      <li><a href="#"  class="active">全部</a></li>
+      <li><a href="#">热销</a></li>
+      <li><a href="#">热销</a></li>
+      <li><a href="#">热销</a></li>
+      <li><a href="#">热销</a></li>
+      <li><a href="#">热销</a></li>
+      <li><a href="#">热销</a></li>
+      <li><a href="#">热销</a></li>
+      <li><a href="#">热销</a></li>
+      <li><a href="#">热销7</a></li>
+      <li><a href="#">热销8</a></li>
+      <li><a href="#">热销9</a></li>
+      <li><a href="#">热销0</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+  <div class="bcj-list">
+    <ul class="list clearfix">
+      <li class="ui-border-tb" >
+        <a href="#">
+        <div class="pic"><img src="images/TB2eYawX43X61Bjy0FlXXaGtVXa_!!2559357181.jpg_400x400.jpg" alt=""></div>
+        <div class="inf">
+          <div class="i">[包邮]</span>藏源鹿品牌原创设计【羊毛针织】中长大衣</div>
+          <div class="o">
+            <i>券后</i>
+            <em>￥</em>
+            106.0
+            <del>¥206</del>
+
+          </div>
+          <div class="s"><i></i><span>已领75117张</span></div>
+          <div class="d">
+            <div class="q" fl></div>
+            <div class="g"><a href="#" class="ga">下单链接</a></div>
+          </div>
+        </div>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </div>
+
+    <div class="footer_bottom">
+      <p><a href="javascript:;">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+
+<script src="jquery/jquery.min.js"></script>
+<script src="template/template-web.js"></script>
+<script src="jquery/iscroll.js"></script>
+<script src="jquery/baicaijia.js"></script>
+
+<!--nav渲染-->
+<script type="text/template" id="bcj">
+  {{each result i}}
+  <li data-id="{{i.titleId}}"><a href="#">{{i.title}}</a></li>
+  {{/each}}
+</script>
+
+<!--图文渲染-->
+<script type="text/template" id="bcj-img">
+  {{each result i}}
+  <li class="ui-border-tb" >
+    <a href="#">
+      <div class="pic">{{@i.productImg}}</div>
+      <div class="inf">
+        <div class="i"><span class="iby">{{@i.productName}}</span></div>
+        <div class="o">
+          {{@i.productPrice}}
+        </div>
+        <div class="s"><i></i><span>{{@i.productCouponRemain}}</span></div>
+        <div class="d">
+          <div class="q" fl>{{@i.productCoupon}}</div>
+          <div class="g">{{@i.productHref}}</div>
+        </div>
+      </div>
+    </a>
+  </li>
+
+  {{/each}}
+</script>
+</body>
+</html>
